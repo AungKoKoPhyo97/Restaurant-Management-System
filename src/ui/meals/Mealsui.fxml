@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.meals.MealsuiController">
+   <children>
+      <AnchorPane>
+         <children>
+            <JFXTabPane id="tab" prefHeight="0.0" prefWidth="0.0" stylesheets="@../../resources/css/Theme.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <tabs>
+                  <Tab text="Meals">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="452.0" prefWidth="644.0">
+                           <children>
+                              <VBox prefHeight="541.0" prefWidth="1000.0">
+                                 <children>
+                                    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="530.0" prefWidth="992.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <HBox prefHeight="565.0" prefWidth="1000.0" spacing="100.0" AnchorPane.bottomAnchor="-89.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-157.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <VBox alignment="TOP_CENTER" prefHeight="461.0" prefWidth="313.0" spacing="25.0">
+                                                   <children>
+                                                      <JFXTextField fx:id="txfmname" labelFloat="true" promptText="Name">
+                                                         <font>
+                                                            <Font size="11.0" />
+                                                         </font>
+                                                      </JFXTextField>
+                                                      <JFXComboBox fx:id="cbType" labelFloat="true" prefHeight="25.0" prefWidth="393.0" promptText="Type" />
+                                                      <JFXTextField fx:id="txfmprice" labelFloat="true" promptText="Price" />
+                                                      <VBox alignment="BOTTOM_CENTER" prefHeight="233.0" prefWidth="293.0" spacing="40.0">
+                                                         <children>
+                                                            <TextArea fx:id="txaIngredients" prefHeight="118.0" prefWidth="293.0" />
+                                                            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="30.0">
+                                                               <children>
+                                                                  <JFXButton id="button" fx:id="mSave" alignment="CENTER" contentDisplay="CENTER" onAction="#InsertData" prefHeight="40.0" prefWidth="85.0" stylesheets="@../../resources/css/Theme.css" text="Save" />
+                                                                  <JFXButton id="button" fx:id="btnCancel" alignment="CENTER" contentDisplay="CENTER" onAction="#handleCancelData" prefHeight="40.0" prefWidth="85.0" stylesheets="@../../resources/css/Theme.css" text="Cancel" />
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </padding>
+                                                   <HBox.margin>
+                                                      <Insets left="30.0" top="15.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                                <VBox prefHeight="515.0" prefWidth="420.0">
+                                                   <children>
+                                                      <VBox fx:id="test" alignment="CENTER" prefHeight="460.0" prefWidth="388.0" spacing="15.0">
+                                                         <children>
+                                                            <HBox alignment="CENTER" prefHeight="33.0" prefWidth="330.0">
+                                                               <children>
+                                                                  <JFXTextField fx:id="txfsearch" labelFloat="true" prefHeight="25.0" prefWidth="296.0" promptText="Search" />
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets bottom="20.0" />
+                                                               </padding>
+                                                            </HBox>
+                                                            <HBox fx:id="tblhbox" alignment="CENTER" prefHeight="314.0" prefWidth="337.0" />
+                                                            <HBox alignment="CENTER" prefHeight="88.0" prefWidth="420.0" spacing="30.0">
+                                                               <children>
+                                                                  <JFXTextField fx:id="txfqty" labelFloat="true" promptText="Quantity" />
+                                                                  <JFXButton id="button" fx:id="mAdd" alignment="CENTER" contentDisplay="CENTER" onAction="#handleAddIntoMeal" prefHeight="40.0" prefWidth="85.0" stylesheets="@../../resources/css/Theme.css" text="Add" />
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" top="15.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="50.0" left="50.0" right="50.0" top="25.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Meals Update">
+                     <content>
+                        <AnchorPane>
+                           <children>
+                              <VBox layoutY="14.0" prefHeight="549.0" prefWidth="1000.0">
+                                 <children>
+                                    <HBox prefHeight="518.0" prefWidth="1000.0">
+                                       <children>
+                                          <VBox prefHeight="317.0" prefWidth="382.0" spacing="50.0">
+                                             <children>
+                                                <JFXTextField fx:id="mname" labelFloat="true" promptText="Meals" />
+                                                <JFXComboBox fx:id="cbMType" labelFloat="true" prefHeight="25.0" prefWidth="393.0" promptText="Type" />
+                                                <JFXTextField fx:id="mprice" labelFloat="true" promptText="Price" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets left="50.0" right="50.0" top="50.0" />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                             </padding>
+                                          </VBox>
+                                          <VBox prefHeight="393.0" prefWidth="504.0" spacing="20.0">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="81.0" prefWidth="504.0" spacing="20.0">
+                                                   <children>
+                                                      <JFXTextField fx:id="txfsearch1" labelFloat="true" onAction="#msearch" prefHeight="25.0" prefWidth="200.0" promptText="Search" />
+                                                      <JFXButton id="button" fx:id="btnupdate1" alignment="CENTER" contentDisplay="CENTER" onAction="#btnRefresh" prefHeight="40.0" prefWidth="85.0" stylesheets="@../../resources/css/Theme.css" text="Refresh" />
+                                                   </children>
+                                                   <padding>
+                                                      <Insets top="10.0" />
+                                                   </padding>
+                                                </HBox>
+                                                <HBox fx:id="tblhbox1" alignment="CENTER" prefHeight="333.0" prefWidth="504.0" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets top="30.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="184.0" prefWidth="1000.0" spacing="100.0">
+                                       <children>
+                                          <JFXButton id="button" fx:id="btnupdate" alignment="CENTER" contentDisplay="CENTER" onAction="#mupdate" prefHeight="40.0" prefWidth="85.0" stylesheets="@../../resources/css/Theme.css" text="Update" />
+                                          <JFXButton id="button" fx:id="btncancel" alignment="CENTER" contentDisplay="CENTER" onAction="#mCancel" prefHeight="40.0" prefWidth="85.0" stylesheets="@../../resources/css/Theme.css" text="Cancel" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </JFXTabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

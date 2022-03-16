@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.salesanalyzed.SalesAnalyzeduiController">
+   <children>
+      <AnchorPane>
+         <children>
+            <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox prefHeight="606.0" prefWidth="1001.0">
+                     <children>
+                        <JFXTabPane id="tab" prefHeight="607.0" prefWidth="1001.0" stylesheets="@../../resources/css/Theme.css">
+                           <tabs>
+                              <Tab text="Daily ">
+                                 <content>
+                                    <AnchorPane id="MainBackground" prefHeight="582.0" prefWidth="1001.0">
+                                       <children>
+                                          <HBox id="MainBackground" fx:id="hDaily" layoutX="57.0" layoutY="14.0" prefHeight="474.0" prefWidth="796.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <VBox fx:id="vDailyProcess" prefHeight="499.0" prefWidth="475.0" spacing="5.0">
+                                                   <children>
+                                                      <HBox alignment="CENTER" prefHeight="42.0" prefWidth="308.0" spacing="20.0">
+                                                         <children>
+                                                            <JFXDatePicker fx:id="dpDailyDate" defaultColor="#aab2bd" prefHeight="25.0" prefWidth="222.0" promptText="Select Date" />
+                                                            <JFXButton id="button" fx:id="btnToday" alignment="CENTER" contentDisplay="CENTER" onAction="#DailyTodaySales" prefHeight="40.0" prefWidth="85.0" stylesheets="@../../resources/css/Theme.css" text="Today" />
+                                                         </children>
+                                                      </HBox>
+                                                      <VBox fx:id="vDailyTbl" alignment="CENTER" prefHeight="375.0" prefWidth="465.0">
+                                                         <padding>
+                                                            <Insets bottom="30.0" left="60.0" right="60.0" top="30.0" />
+                                                         </padding></VBox>
+                                                      <HBox fx:id="hDailyBtn" alignment="CENTER" prefHeight="50.0" prefWidth="465.0" spacing="100.0">
+                                                         <children>
+                                                            <JFXButton id="button" fx:id="btnDailyCancel" alignment="CENTER" contentDisplay="CENTER" onAction="#DailySalesCancel" prefHeight="40.0" prefWidth="85.0" stylesheets="@../../resources/css/Theme.css" text="Cancel" />
+                                                            <JFXButton id="button" fx:id="btnDailySearch" alignment="CENTER" contentDisplay="CENTER" onAction="#DailySalesSearch" prefHeight="40.0" prefWidth="85.0" stylesheets="@../../resources/css/Theme.css" text="Search" />
+                                                         </children>
+                                                         <VBox.margin>
+                                                            <Insets top="10.0" />
+                                                         </VBox.margin>
+                                                      </HBox>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets />
+                                                   </HBox.margin>
+                                                   <padding>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </padding>
+                                                </VBox>
+                                                <VBox prefHeight="499.0" prefWidth="476.0">
+                                                   <children>
+                                                      <Label alignment="CENTER" prefHeight="33.0" prefWidth="494.0" text="Highest Selling Meals of All Time">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                         <padding>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </padding>
+                                                      </Label>
+                                                      <PieChart fx:id="pieChart">
+                                                         <padding>
+                                                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                         </padding>
+                                                      </PieChart>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Total Sales">
+                                 <content>
+                                    <AnchorPane prefWidth="935.0">
+                                       <children>
+                                          <HBox id="MainBackground" layoutX="14.0" layoutY="32.0" prefHeight="554.0" prefWidth="1001.0" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <VBox prefHeight="553.0" prefWidth="474.0">
+                                                   <children>
+                                                      <HBox alignment="CENTER" prefHeight="49.0" prefWidth="408.0" spacing="20.0">
+                                                         <children>
+                                                            <JFXComboBox fx:id="cbDateSelect" labelFloat="true" onAction="#cbDateSelect" prefHeight="25.0" prefWidth="131.0" promptText="Date">
+                                                               <HBox.margin>
+                                                                  <Insets left="10.0" />
+                                                               </HBox.margin>
+                                                            </JFXComboBox>
+                                                            <JFXDatePicker fx:id="dpWeeklyStart" defaultColor="#aab2bd" prefHeight="25.0" prefWidth="125.0" promptText="Start Date" />
+                                                            <JFXDatePicker fx:id="dpWeeklyEnd" defaultColor="#aab2bd" prefHeight="25.0" prefWidth="125.0" promptText="End Date" />
+                                                         </children>
+                                                         <padding>
+                                                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                         </padding>
+                                                         <VBox.margin>
+                                                            <Insets bottom="10.0" />
+                                                         </VBox.margin>
+                                                      </HBox>
+                                                      <HBox fx:id="hWeeklyTbl" alignment="CENTER" maxWidth="-Infinity" prefHeight="433.0" prefWidth="420.0">
+                                                         <padding>
+                                                            <Insets bottom="20.0" top="20.0" />
+                                                         </padding>
+                                                      </HBox>
+                                                      <HBox fx:id="hWeeklyBtn" alignment="CENTER" prefHeight="104.0" prefWidth="430.0" spacing="50.0">
+                                                         <children>
+                                                            <JFXButton id="button" fx:id="btnWeeklyCancel" alignment="CENTER" contentDisplay="CENTER" onAction="#weeklySaleCancel" prefHeight="40.0" prefWidth="85.0" stylesheets="@../../resources/css/Theme.css" text="Cancel">
+                                                               <HBox.margin>
+                                                                  <Insets left="50.0" />
+                                                               </HBox.margin>
+                                                            </JFXButton>
+                                                            <JFXButton id="button" fx:id="btnWeeklySearch" alignment="CENTER" contentDisplay="CENTER" onAction="#weeklySalesSearch" prefHeight="40.0" prefWidth="85.0" ripplerFill="WHITE" stylesheets="@../../resources/css/Theme.css" text="Search">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                            </JFXButton>
+                                                            <JFXButton id="button" fx:id="btnLoadChart" alignment="CENTER" contentDisplay="CENTER" onAction="#LoadChart" prefHeight="40.0" prefWidth="85.0" ripplerFill="WHITE" stylesheets="@../../resources/css/Theme.css" text="Load">
+                                                               <HBox.margin>
+                                                                  <Insets right="20.0" />
+                                                               </HBox.margin>
+                                                            </JFXButton>
+                                                         </children>
+                                                         <VBox.margin>
+                                                            <Insets top="10.0" />
+                                                         </VBox.margin>
+                                                         <opaqueInsets>
+                                                            <Insets />
+                                                         </opaqueInsets>
+                                                         <padding>
+                                                            <Insets bottom="20.0" />
+                                                         </padding>
+                                                      </HBox>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                                <VBox prefHeight="553.0" prefWidth="565.0">
+                                                   <children>
+                                                      <LineChart fx:id="chartSales" prefHeight="512.0" prefWidth="521.0" title="Total Sales">
+                                                        <xAxis>
+                                                          <CategoryAxis fx:id="AxisX" prefHeight="37.0" prefWidth="405.0" tickLabelRotation="95.2" tickLength="5.0" />
+                                                        </xAxis>
+                                                        <yAxis>
+                                                          <NumberAxis fx:id="AxisY" label="Sales" side="LEFT" />
+                                                        </yAxis>
+                                                         <padding>
+                                                            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                         </padding>
+                                                      </LineChart>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                           </tabs>
+                        </JFXTabPane>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

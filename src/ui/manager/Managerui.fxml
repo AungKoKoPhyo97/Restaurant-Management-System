@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.manager.ManageruiController">
+   <children>
+      <BorderPane fx:id="managerBorder" prefHeight="200.0" prefWidth="200.0">
+         <left>
+            <VBox prefHeight="586.0" prefWidth="250.0" style="-fx-background-color: #AAB2BD;">
+               <children>
+                  <JFXButton id="MainBtn" fx:id="btnAnalyzed" onAction="#Analyzesfxml" prefHeight="70.0" prefWidth="250.0" stylesheets="@../../resources/css/Theme.css" text="Sales Analyzed">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton id="MainBtn" fx:id="btnInventory" onAction="#InventoryFxml" prefHeight="70.0" prefWidth="250.0" stylesheets="@../../resources/css/Theme.css" text="Inventory">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton id="MainBtn" fx:id="btnMeals" onAction="#MealsFxml" prefHeight="70.0" prefWidth="250.0" stylesheets="@../../resources/css/Theme.css" text="Meals">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton id="MainBtn" fx:id="btnStaff" onAction="#StaffFxml" prefHeight="70.0" prefWidth="250.0" stylesheets="@../../resources/css/Theme.css" text="Staff">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="200.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton id="MainBtn" fx:id="btnUpdatePassword" onAction="#UpdatePasswordFxml" prefHeight="60.0" prefWidth="250.0" stylesheets="@../../resources/css/Theme.css" text="Update Password">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton id="ExitBtn" fx:id="btnExit" onAction="#exitProgram" prefHeight="60.0" prefWidth="250.0" stylesheets="@../../resources/css/Theme.css" text="Exit">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <Label alignment="CENTER" prefHeight="233.0" prefWidth="1000.0" text="Restaurant Management" textAlignment="JUSTIFY" wrapText="true" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="62.0" />
+               </font>
+            </Label>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

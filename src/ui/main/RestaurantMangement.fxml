@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.main.RestaurantMangementController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="200.0">
+         <children>
+            <HBox prefHeight="400.0" prefWidth="700.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="300.0" prefWidth="350.0" style="-fx-background-color: #AAB2BD;">
+                     <children>
+                        <ImageView fitHeight="406.0" fitWidth="349.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/image/default.png" />
+                           </image>
+                        </ImageView>
+                        <VBox alignment="CENTER" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="300.0" prefWidth="350.0" style="-fx-background-color: #AAB2BD;">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="377.0" prefWidth="290.0" spacing="30.0" style="-fx-background-color: #CCD1D9;">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="39.0" prefWidth="230.0" text="Login" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Perpetua Titling MT Bold" size="33.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="txfUsername" labelFloat="true" promptText="Username" />
+                              <JFXPasswordField fx:id="txfPassword" labelFloat="true" promptText="Password" />
+                              <HBox alignment="CENTER" prefHeight="62.0" prefWidth="230.0" spacing="40.0">
+                                 <children>
+                                    <JFXButton id="button" fx:id="btnCancel" onAction="#HandleCancel" prefHeight="40.0" prefWidth="80.0" stylesheets="@../../resources/css/Theme.css" text="Cancel" />
+                                    <JFXButton id="button" fx:id="btnLogin" onAction="#HandleLogin" prefHeight="40.0" prefWidth="80.0" stylesheets="@../../resources/css/Theme.css" text="Login" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="40.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.sales.salesprocess.SalesProcessuiController">
+   <children>
+      <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0">
+         <children>
+            <HBox prefHeight="600.0" prefWidth="1000.0">
+               <children>
+                  <VBox prefHeight="600.0" prefWidth="646.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                           <children>
+                              <JFXButton id="Menubutton" fx:id="btnBreakfast" alignment="CENTER" contentDisplay="CENTER" onAction="#handleBreakfast" prefHeight="50.0" prefWidth="150.0" stylesheets="@../../../resources/css/Theme.css" text="Breakfast">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton id="Menubutton" fx:id="btnLunch" alignment="CENTER" contentDisplay="CENTER" onAction="#handleLunch" prefHeight="50.0" prefWidth="150.0" stylesheets="@../../../resources/css/Theme.css" text="Lunch">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton id="Menubutton" fx:id="btnSnacks" alignment="CENTER" contentDisplay="CENTER" onAction="#handleSnack" prefHeight="50.0" prefWidth="150.0" stylesheets="@../../../resources/css/Theme.css" text="Snacks">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton id="Menubutton" fx:id="btnDrink" alignment="CENTER" contentDisplay="CENTER" onAction="#handleDrink" prefHeight="50.0" prefWidth="150.0" stylesheets="@../../../resources/css/Theme.css" text="Drink">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                        <VBox fx:id="vboxbtn" prefHeight="496.0" prefWidth="623.0">
+                           <children>
+                              <HBox fx:id="btnhbox" prefHeight="125.0" prefWidth="200.0" spacing="10.0">
+                                 <padding>
+                                    <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox fx:id="btnhbox1" prefHeight="125.0" prefWidth="200.0" spacing="10.0">
+                                 <padding>
+                                    <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox fx:id="btnhbox2" prefHeight="125.0" prefWidth="200.0" spacing="10.0">
+                                 <padding>
+                                    <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox fx:id="btnhbox3" prefHeight="125.0" prefWidth="200.0" spacing="10.0">
+                                 <padding>
+                                    <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="600.0" prefWidth="400.0">
+                     <children>
+                        <HBox fx:id="tblhbox" alignment="CENTER" prefHeight="495.0" prefWidth="354.0">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets bottom="50.0" top="50.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="217.0" spacing="50.0">
+                           <children>
+                              <JFXButton id="button" fx:id="btnOrder" alignment="CENTER" contentDisplay="CENTER" onAction="#handleOrderButton" prefHeight="40.0" prefWidth="85.0" stylesheets="@../../../resources/css/Theme.css" text="Order" />
+                              <JFXButton id="button" fx:id="btnCancel" alignment="CENTER" contentDisplay="CENTER" onAction="#handleCancelButton" prefHeight="40.0" prefWidth="85.0" stylesheets="@../../../resources/css/Theme.css" text="Cancel" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

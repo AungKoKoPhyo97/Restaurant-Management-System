@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.sales.inventory.SalesInventoryuiController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0">
+         <children>
+            <VBox prefHeight="600.0" prefWidth="1000.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="60.0">
+                     <children>
+                        <JFXComboBox fx:id="cbType" labelFloat="true" onAction="#TypeSearch" prefHeight="43.0" prefWidth="130.0" promptText="Type" />
+                        <JFXTextField fx:id="txfSearch" prefHeight="45.0" prefWidth="281.0" promptText="Search" />
+                        <JFXButton id="button" fx:id="btnRefresh" alignment="CENTER" contentDisplay="CENTER" onAction="#refreshTbl" prefHeight="40.0" prefWidth="85.0" stylesheets="@../../../resources/css/Theme.css" text="Refresh" />
+                        <JFXButton id="button" fx:id="btnCancel" alignment="CENTER" contentDisplay="CENTER" onAction="#CancelAction" prefHeight="40.0" prefWidth="85.0" stylesheets="@../../../resources/css/Theme.css" text="Cancel" />
+                     </children>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="501.0" prefWidth="834.0" spacing="20.0">
+                     <children>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="61.0" prefWidth="201.0" text="Meals Table">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <VBox fx:id="vbmealstbl" alignment="CENTER" prefHeight="501.0" prefWidth="500.0">
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="61.0" prefWidth="201.0" text="Inventory Table">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <VBox fx:id="vbinvtable" alignment="CENTER" prefHeight="501.0" prefWidth="527.0">
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
